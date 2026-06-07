@@ -80,9 +80,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Atlas — Agentic Startup Mentor" },
       { name: "description", content: "Pressure-test your startup idea with a fleet of specialist AI agents. VC-grade analysis in 90 seconds." },
       { property: "og:title", content: "Atlas — Agentic Startup Mentor" },
-      { property: "og:description", content: "8 specialist agents. One verdict. Live." },
+      { property: "og:description", content: "Pressure-test your startup idea with a fleet of specialist AI agents. VC-grade analysis in 90 seconds." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Atlas — Agentic Startup Mentor" },
+      { name: "twitter:description", content: "Pressure-test your startup idea with a fleet of specialist AI agents. VC-grade analysis in 90 seconds." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/0a4c452e-95cc-4a39-82a7-d28321218335/id-preview-080f77b9--b1a1727c-d2ad-4c7e-8795-2596bdfcc2ae.lovable.app-1780802324586.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/0a4c452e-95cc-4a39-82a7-d28321218335/id-preview-080f77b9--b1a1727c-d2ad-4c7e-8795-2596bdfcc2ae.lovable.app-1780802324586.png" },
     ],
     links: [
       {
