@@ -1,39 +1,27 @@
 const TICKS = [
-  { k: "TAM", v: "$2.4T", d: "+12%" },
-  { k: "SEED.MED", v: "$2.8M", d: "+8%" },
-  { k: "SERIES-A", v: "$14M", d: "−3%" },
-  { k: "VC.DRY-PWDR", v: "$1.1T", d: "flat" },
-  { k: "AI.STARTUPS", v: "47K", d: "+22%" },
-  { k: "PMF.RATE", v: "11%", d: "+1%" },
-  { k: "Y-COMB.S25", v: "208", d: "+14" },
-  { k: "VALU.MED", v: "$24M", d: "−6%" },
+  { text: "15,247 IDEAS VALIDATED", icon: "🚀" },
+  { text: "28,431 MARKET REPORTS GENERATED", icon: "📊" },
+  { text: "19,874 COMPETITOR ANALYSES COMPLETED", icon: "⚔️" },
+  { text: "FUNDING INSIGHTS LIVE", icon: "💰" },
+  { text: "8 SPECIALIST AGENTS ACTIVE", icon: "🤖" },
+  { text: "150+ MARKETS TRACKED", icon: "🌍" },
+  { text: "RESULTS IN 90 SECONDS", icon: "⏱" },
 ];
 
 export function Ticker() {
-  const items = [...TICKS, ...TICKS];
+  const items = [...TICKS, ...TICKS, ...TICKS];
   return (
-    <div className="border-y border-border bg-surface/60 backdrop-blur overflow-hidden ticker-strip">
-      <div className="flex gap-10 py-2 px-6 whitespace-nowrap animate-[ticker_45s_linear_infinite] font-mono text-[11px]">
+    <div className="border-b border-border bg-slate-950/80 backdrop-blur py-2.5 overflow-hidden ticker-strip text-[10px] uppercase font-mono tracking-widest text-slate-400 z-50 relative">
+      <div className="flex gap-12 whitespace-nowrap animate-[ticker_30s_linear_infinite]">
         {items.map((t, i) => (
-          <span key={i} className="inline-flex items-center gap-2">
-            <span className="text-muted-foreground tracking-wider">{t.k}</span>
-            <span className="text-foreground font-semibold">{t.v}</span>
-            <span
-              className={
-                t.d.startsWith("+")
-                  ? "text-signal"
-                  : t.d.startsWith("−") || t.d.startsWith("-")
-                    ? "text-destructive"
-                    : "text-muted-foreground"
-              }
-            >
-              {t.d}
-            </span>
-            <span className="text-border">·</span>
+          <span key={i} className="inline-flex items-center gap-2.5">
+            <span>{t.icon}</span>
+            <span className="text-slate-200 font-semibold">{t.text}</span>
+            <span className="text-slate-700 font-bold">•</span>
           </span>
         ))}
       </div>
-      <style>{`@keyframes ticker { from { transform: translateX(0) } to { transform: translateX(-50%) } }`}</style>
+      <style>{`@keyframes ticker { from { transform: translateX(0) } to { transform: translateX(-33.33%) } }`}</style>
     </div>
   );
 }
